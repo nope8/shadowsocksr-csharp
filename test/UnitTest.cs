@@ -84,8 +84,8 @@ namespace test
                 {
                     IEncryptor encryptor;
                     IEncryptor decryptor;
-                    encryptor = new MbedTLSEncryptor("aes-256-cfb", "barfoo!");
-                    decryptor = new MbedTLSEncryptor("aes-256-cfb", "barfoo!");
+                    encryptor = new MbedTLSEncryptor("aes-256-cfb", "barfoo!", true);
+                    decryptor = new MbedTLSEncryptor("aes-256-cfb", "barfoo!", true);
                     RunEncryptionRound(encryptor, decryptor);
                 }
             }
@@ -124,8 +124,8 @@ namespace test
                     var random = new Random();
                     IEncryptor encryptor;
                     IEncryptor decryptor;
-                    encryptor = new MbedTLSEncryptor("rc4-md5", "barfoo!");
-                    decryptor = new MbedTLSEncryptor("rc4-md5", "barfoo!");
+                    encryptor = new MbedTLSEncryptor("rc4-md5", "barfoo!", true);
+                    decryptor = new MbedTLSEncryptor("rc4-md5", "barfoo!", true);
                     RunEncryptionRound(encryptor, decryptor);
                 }
             }
@@ -164,8 +164,8 @@ namespace test
                     var random = new Random();
                     IEncryptor encryptor;
                     IEncryptor decryptor;
-                    encryptor = new SodiumEncryptor("salsa20", "barfoo!");
-                    decryptor = new SodiumEncryptor("salsa20", "barfoo!");
+                    encryptor = new SodiumEncryptor("salsa20", "barfoo!", true);
+                    decryptor = new SodiumEncryptor("salsa20", "barfoo!", true);
                     RunEncryptionRound(encryptor, decryptor);
                 }
             }
